@@ -1,73 +1,121 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hi Sayang &lt;3</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Chat</title>
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
-      background: linear-gradient(to bottom right, #ffebef, #ffe1e9);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Press Start 2P', cursive;
-    }
-    .login-box {
-      background: #fff5f8;
-      padding: 20px;
-      border: 4px solid #8b0000;
-      box-shadow: 4px 4px 0 #8b0000;
-      width: 90%;
-      max-width: 350px;
-    }
-    h2 {
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: #8b0000;
-    }
-    input, button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 3px solid #8b0000;
-      font-size: 12px;
-    }
-    button {
-      background-color: #8b0000;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #a30000;
-    }
+    }.page-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.chat-box {
+  margin-top: 30px;
+}
+
+.chat-bubble {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  font-size: 16px;
+}
+
+.left {
+  background-color: #ffe4ec;
+  color: #333;
+  border: 2px solid #ffc6d0;
+  margin-right: auto;
+}
+
+.right {
+  background-color: #ffe4ec;
+  color: #333;
+  border: 2px solid #ffc6d0;
+  margin-left: auto;
+}
+
+.chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.continue-btn {
+  background-color: #f9c6d0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.continue-btn:hover {
+  background-color: #fba4ba;
+}
+
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #b2556f;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
   </style>
 </head>
 <body>
-  <div class="login-box">
-    <h2>Hi Sayang &lt;3</h2>
-    <input type="text" id="username" placeholder="Enter username">
-    <input type="password" id="password" placeholder="Enter password">
-    <button onclick="login()">Log In</button>
-  </div>
+  <div class="page-container">
+    <div class="chat-box" id="chatBox">
+      <!-- Chat will appear here -->
+    </div><button class="continue-btn" id="continueBtn">▶ Continue</button>
 
-  <script>
-    function login() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
+<br><a href="wishes.html" class="back-btn">🏠 Back to Birthday Wishes</a>
 
-      if (user === "baby" && pass === "03102002") {
-        window.location.href = "main.html";
+  </div>  <script>
+    const chats = [
+      { sender: 'left', avatar: 'images/janjan-pixel.png', text: 'Hi sayang, happy birthday! 🎂' },
+      { sender: 'right', avatar: 'images/sanzu-pixel.png', text: 'Aww thank you baby, I love you! ❤️' },
+      { sender: 'left', avatar: 'images/janjan-pixel.png', text: 'I hope today is as special as you are to me!' },
+      { sender: 'left', avatar: 'images/janjan-pixel.png', text: 'You are my light, my peace, and my laughter 🥺' },
+      { sender: 'left', avatar: 'images/janjan-pixel.png', text: 'Happy birthday, sayang. 💕 Let's keep creating memories together forever.' }
+    ];
+
+    let index = 0;
+    const chatBox = document.getElementById('chatBox');
+    const continueBtn = document.getElementById('continueBtn');
+
+    continueBtn.addEventListener('click', () => {
+      if (index < chats.length) {
+        const chat = chats[index];
+        const bubble = document.createElement('div');
+        bubble.className = `chat-bubble ${chat.sender}`;
+
+        bubble.innerHTML = `
+          <img src="${chat.avatar}" class="chat-avatar" alt="Avatar">
+          <span>${chat.text}</span>
+        `;
+
+        chatBox.appendChild(bubble);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        index++;
       } else {
-        alert("Username or password is incorrect. Try again ya sayang!");
+        continueBtn.disabled = true;
+        continueBtn.innerText = '🎉 Done';
       }
-    }
-  </script>
-</body>
+    });
+  </script></body>
 </html>
