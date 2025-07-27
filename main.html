@@ -4,7 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Menu</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Pixel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fff2f2;
+      font-family: 'Press Start 2P', cursive;
+      margin: 0;
+      padding: 0;
+      color: #7b0000;
+      text-align: center;
+    }
+
+    .home-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .home-title {
+      font-size: 14px;
+      color: #7b0000;
+      margin-bottom: 40px;
+    }
+
+    .tab-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .home-tab {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ffeaea;
+      border: 3px solid #7b0000;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #7b0000;
+      font-family: 'Press Start 2P', cursive;
+      box-shadow: 4px 4px 0 #7b0000;
+      font-size: 0.6em;
+      width: fit-content;
+    }
+
+    .home-tab:hover {
+      background-color: #ffbad2;
+    }
+
+    @media (min-width: 600px) {
+      .tab-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="home-container">
