@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Vouchers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-container">
+    <a href="main.html" class="back-btn">⬅ Home</a>
+    <h1 class="page-title">🎟 Our Date Vouchers</h1>
+    <p style="font-size: 10px; margin-bottom: 15px;">Special moments just for us ❤️</p>
+
+    <main class="voucher-container">
+      <!-- Mixue Date -->
+      <div class="voucher-card">
+        <img src="images/mixue.jpg" class="voucher-img" alt="Mixue Date">
+        <div class="voucher-info">
+          <h4>🍦 Mixue Date</h4>
+          <ul>
+            <li>1 cup Mixue each</li>
+            <li>Must be sweet that day 😚</li>
+          </ul>
+          <button class="redeem-btn" onclick="redeem('Mixue Date')">Redeem</button>
+        </div>
+      </div>
+
+      <!-- Taiping Lake Date -->
+      <div class="voucher-card">
+        <img src="images/taiping.jpg" class="voucher-img" alt="Taiping Date">
+        <div class="voucher-info">
+          <h4>🌳 Taiping Lake Date</h4>
+          <ul>
+            <li>Romantic walk + picnic</li>
+            <li>Feed the ducks 🦆</li>
+          </ul>
+          <button class="redeem-btn" onclick="redeem('Taiping Lake Date')">Redeem</button>
+        </div>
+      </div>
+
+      <!-- LDR Date -->
+      <div class="voucher-card">
+        <img src="images/ldr.jpg" class="voucher-img" alt="LDR Date">
+        <div class="voucher-info">
+          <h4>💻 LDR Movie Night</h4>
+          <ul>
+            <li>Netflix & call</li>
+            <li>Romantic vibes 🥰</li>
+          </ul>
+          <button class="redeem-btn" onclick="redeem('LDR Movie Night')">Redeem</button>
+        </div>
+      </div>
+
+      <!-- Mamak Hangout -->
+      <div class="voucher-card">
+        <img src="images/mamak.jpg" class="voucher-img" alt="Mamak Hangout">
+        <div class="voucher-info">
+          <h4>🍛 Mamak Hangout</h4>
+          <ul>
+            <li>Teh tarik session</li>
+            <li>Late night talks</li>
+          </ul>
+          <button class="redeem-btn" onclick="redeem('Mamak Hangout')">Redeem</button>
+        </div>
+      </div>
+
+      <!-- Merisik (Locked) -->
+      <div class="voucher-card locked">
+        <img src="images/merisik.jpg" class="voucher-img" alt="Merisik">
+        <div class="voucher-info">
+          <h4>💍 Merisik Voucher</h4>
+          <p class="locked-msg">🔒 Unlocks later, sabar sayang 😘</p>
+        </div>
+      </div>
+
+      <!-- Bertunang (Locked) -->
+      <div class="voucher-card locked">
+        <img src="images/bertunang.jpg" class="voucher-img" alt="Bertunang">
+        <div class="voucher-info">
+          <h4>💖 Bertunang Voucher</h4>
+          <p class="locked-msg">🔒 Patience, beautiful moments await 🥹</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function redeem(title) {
+      alert("Yay! '" + title + "' has been redeemed! 💖");
+    }
+  </script>
+</body>
+</html>

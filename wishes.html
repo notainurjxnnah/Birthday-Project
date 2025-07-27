@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Wishes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-container">
+
+  <!-- Back to Home -->
+  <a href="main.html" class="back-btn">🏠 Home</a>
+
+  <!-- Countdown Flip Clock -->
+  <section class="countdown-container">
+    <div class="time-box">
+      <div class="time-number" id="days">00</div>
+      <div class="time-label">Days</div>
+    </div>
+    <div class="time-box">
+      <div class="time-number" id="hours">00</div>
+      <div class="time-label">Hours</div>
+    </div>
+    <div class="time-box">
+      <div class="time-number" id="minutes">00</div>
+      <div class="time-label">Minutes</div>
+    </div>
+    <div class="time-box">
+      <div class="time-number" id="seconds">00</div>
+      <div class="time-label">Seconds</div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <div class="tab-menu wishes-tab">
+    <a href="birthday-wishes.html" class="home-tab active">🎉 Birthday Wishes</a>
+    <a href="developer.html" class="home-tab">💻 Developer</a>
+  </div>
+
+  <!-- Chat Box -->
+  <main class="chat-box">
+    <div class="chat-bubble left">
+      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
+      <span class="typing-text" data-text="Hey sayang, happy birthday! 🎂"></span>
+    </div>
+    <div class="chat-bubble right">
+      <img src="images/sanzu-pixel.png" class="chat-avatar" alt="Sanzu">
+      <span class="typing-text" data-text="Aww thank you baby, I love you! ❤️"></span>
+    </div>
+    <div class="chat-bubble left">
+      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
+      <span class="typing-text" data-text="I hope today is as special as you are to me!"></span>
+    </div>
+  </main>
+
+  <!-- Continue Button -->
+  <button id="next-btn" class="continue-btn">▶ Continue</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/wishes.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Sayang <3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffebef, #ffe1e9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', cursive;
+    }
+    .login-box {
+      background: #fff5f8;
+      padding: 20px;
+      border: 4px solid #8b0000;
+      box-shadow: 4px 4px 0 #8b0000;
+      width: 90%;
+      max-width: 350px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #8b0000;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 3px solid #8b0000;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      text-align: center;
+    }
+    button {
+      background: #8b0000;
+      color: #fff;
+      cursor: pointer;
+    }
+    .error {
+      color: #d90429;
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Hi Sayang &lt;3</h2>
+    <input type="text" id="username" placeholder="USERNAME" />
+    <input type="password" id="password" placeholder="PASSWORD" />
+    <button onclick="login()">START</button>
+    <p class="error" id="error"></p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="music/background.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function login() {
+      const u = document.getElementById('username').value.trim();
+      const p = document.getElementById('password').value.trim();
+      if (u === 'baby' && p === '03102002') {
+        window.location.href = 'loading.html';
+      } else {
+        document.getElementById('error').textContent = 'WRONG! TRY AGAIN.';
+      }
+    }
+  </script>
+</body>
+</html>

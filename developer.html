@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-container">
+
+  <a href="main.html" class="back-btn">🏠 Home</a>
+
+  <!-- Countdown Flip Clock -->
+  <section class="countdown-container">
+    <div class="time-box">
+      <div class="time-number" id="days">00</div>
+      <div class="time-label">Days</div>
+    </div>
+    <div class="time-box">
+      <div class="time-number" id="hours">00</div>
+      <div class="time-label">Hours</div>
+    </div>
+    <div class="time-box">
+      <div class="time-number" id="minutes">00</div>
+      <div class="time-label">Minutes</div>
+    </div>
+    <div class="time-box">
+      <div class="time-number" id="seconds">00</div>
+      <div class="time-label">Seconds</div>
+    </div>
+  </section>
+
+  <div class="tab-menu wishes-tab">
+    <a href="birthday-wishes.html" class="home-tab">🎉 Birthday Wishes</a>
+    <a href="developer.html" class="home-tab active">💻 Developer</a>
+  </div>
+
+  <!-- Chat Box for Developer -->
+  <main class="chat-box">
+    <div class="chat-bubble left">
+      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
+      <span class="typing-text" data-text="Hi! I’m Jan Jan, the creator of this website. 🎨"></span>
+    </div>
+    <div class="chat-bubble left">
+      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
+      <span class="typing-text" data-text="This site is built with love for my sayang ❤️"></span>
+    </div>
+    <div class="chat-bubble right">
+      <img src="images/sanzu-pixel.png" class="chat-avatar" alt="Sanzu">
+      <span class="typing-text" data-text="Aww baby, you’re the sweetest!"></span>
+    </div>
+  </main>
+
+  <button id="next-btn" class="continue-btn">▶ Continue</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/wishes.js"></script>
+</body>
+</html>
