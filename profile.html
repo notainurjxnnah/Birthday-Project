@@ -15,17 +15,24 @@
 
     .page-container {
       max-width: 600px;
-      margin: 0 auto;          /* No extra top margin */
-      padding: 20px 20px 30px; /* Same padding as developer.html */
+      margin: 0 auto;
+      padding: 20px 20px 30px;
     }
 
     .back-btn {
       display: inline-block;
-      margin-top: 10px;
+      margin: 10px auto 20px auto;
       text-decoration: none;
       color: #9b5b6e;
       font-weight: bold;
       font-size: 16px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: #af4c74;
+      text-decoration: underline;
     }
 
     .hearts-row {
@@ -76,7 +83,7 @@
     <a href="home.html" class="back-btn">← Back to Home</a>
 
     <!-- Hearts -->
-    <div class="hearts-row" id="emoji-row">❤️ ❤️ ❤️</div>
+    <div class="hearts-row">❤️ ❤️ ❤️</div>
 
     <!-- Profile Box -->
     <div class="profile-box">
