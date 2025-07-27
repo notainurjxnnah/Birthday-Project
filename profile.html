@@ -3,63 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Profile</title>
-
-  <!-- Pixel Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  <title>Atif Haziq Profile</title>
   <style>
-    html, body {
+    body {
+      background-color: #fff2f2;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff2f2;
-      font-family: 'Press Start 2P', cursive;
-      color: #7b0000;
-      height: 100%;
+      text-align: center;
     }
 
     .page-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Full screen height */
-      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
       padding: 20px;
-    }
-
-    .profile-wrapper {
-      max-width: 700px;
-      width: 100%;
     }
 
     .back-btn {
       display: inline-block;
-      margin-bottom: 30px;
-      padding: 10px 20px;
-      background-color: #ffeaea;
-      border: 3px solid #7b0000;
-      color: #7b0000;
+      margin-top: 10px;
       text-decoration: none;
-      font-family: 'Press Start 2P', cursive;
-      box-shadow: 4px 4px 0 #7b0000;
-      font-size: 10px;
+      color: #9b5b6e;
+      font-weight: bold;
+      font-size: 16px;
     }
 
     .hearts-row {
-      font-size: 16px;
+      font-size: 24px;
       margin-bottom: 20px;
       color: #f48ca5;
-      user-select: none;
     }
 
     .profile-box {
-      background-color: #ffeaea;
-      border: 3px solid #7b0000;
-      box-shadow: 4px 4px 0 #7b0000;
+      background-color: #ffe6ec;
       border-radius: 20px;
-      padding: 30px 20px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       max-width: 350px;
-      margin: 0 auto;
+      margin: 0 auto 30px auto;
     }
 
     .profile-pics {
@@ -73,43 +54,44 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 3px solid #7b0000;
+      border: 3px solid #ffc6d0;
       object-fit: cover;
     }
 
     .profile-info p {
-      margin: 10px 0;
-      font-size: 8px;
-      color: #7b0000;
-      line-height: 1.6;
+      margin: 8px 0;
+      font-size: 16px;
+      color: #6b394d;
+    }
+
+    .profile-info p strong {
+      color: #af4c74;
     }
   </style>
 </head>
 <body>
   <div class="page-container">
-    <div class="profile-wrapper">
-      
-      <!-- Back to Home -->
-      <a href="main.html" class="back-btn">← Home</a>
 
-      <!-- Hearts -->
-      <div class="hearts-row">❤️ ❤️ ❤️</div>
+    <!-- Back Button -->
+    <a href="home.html" class="back-btn">← Back to Home</a>
 
-      <!-- Profile Box -->
-      <div class="profile-box">
-        <div class="profile-pics">
-          <img src="images/profile_real.jpg" alt="Real Picture" class="profile-pic" />
-          <img src="images/profile_pixel.jpg" alt="Pixel Character" class="profile-pic" />
-        </div>
-        <div class="profile-info">
-          <p><strong>Name:</strong> Atif Haziq</p>
-          <p><strong>ID:</strong> Sanzu</p>
-          <p><strong>Rank:</strong> Discord Gamer Boy</p>
-          <p><strong>Level:</strong> Lvl.45 Boyfriend</p>
-        </div>
+    <!-- Hearts -->
+    <div class="hearts-row" id="emoji-row">❤️ ❤️ ❤️</div>
+
+    <!-- Profile Box -->
+    <div class="profile-box">
+      <div class="profile-pics">
+        <img src="images/profile_real.jpg" alt="Real Picture" class="profile-pic" />
+        <img src="images/profile_pixel.jpg" alt="Pixel Character" class="profile-pic" />
       </div>
-
+      <div class="profile-info">
+        <p><strong>Name:</strong> Atif Haziq</p>
+        <p><strong>ID:</strong> Sanzu</p>
+        <p><strong>Rank:</strong> Discord Gamer Boy</p>
+        <p><strong>Level:</strong> Lvl.45 Boyfriend</p>
+      </div>
     </div>
+
   </div>
 </body>
 </html>
