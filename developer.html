@@ -1,59 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Developer Profile</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background-color: #fff2f2;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .page-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #9b5b6e;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .hearts-row {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #f48ca5;
+    }
+
+    .profile-box {
+      background-color: #ffe6ec;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 350px;
+      margin: 0 auto 30px auto;
+    }
+
+    .profile-pics {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #ffc6d0;
+      object-fit: cover;
+    }
+
+    .profile-info p {
+      margin: 8px 0;
+      font-size: 16px;
+      color: #6b394d;
+    }
+
+    .profile-info p strong {
+      color: #af4c74;
+    }
+
+    /* Tabs style (matching wishes.html) */
+    .tab-menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 20px;
+    }
+    .home-tab {
+      padding: 10px 20px;
+      background-color: #ffe4ec;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #8b0000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .home-tab.active {
+      background-color: #ffbad2;
+    }
+  </style>
 </head>
-<body class="page-container">
+<body>
+  <div class="page-container">
 
-  <a href="main.html" class="back-btn">🏠 Home</a>
+    <!-- Back Button -->
+    <a href="wishes.html" class="back-btn">← Back to Wishes</a>
 
-  <!-- Countdown Flip Clock -->
-  <section class="countdown-container">
-    <div class="time-box">
-      <div class="time-number" id="days">00</div>
-      <div class="time-label">Days</div>
-    </div>
-    <div class="time-box">
-      <div class="time-number" id="hours">00</div>
-      <div class="time-label">Hours</div>
-    </div>
-    <div class="time-box">
-      <div class="time-number" id="minutes">00</div>
-      <div class="time-label">Minutes</div>
-    </div>
-    <div class="time-box">
-      <div class="time-number" id="seconds">00</div>
-      <div class="time-label">Seconds</div>
-    </div>
-  </section>
+    <!-- Hearts -->
+    <div class="hearts-row">💻 💖 🎀</div>
 
-  <div class="tab-menu wishes-tab">
-    <a href="birthday-wishes.html" class="home-tab">🎉 Birthday Wishes</a>
-    <a href="developer.html" class="home-tab active">💻 Developer</a>
+    <!-- Developer Profile Box -->
+    <div class="profile-box">
+      <div class="profile-pics">
+        <img src="images/janjan-pixel.png" alt="Real" class="profile-pic">
+        <img src="images/janjan-real.jpg" alt="Pixel" class="profile-pic">
+      </div>
+      <div class="profile-info">
+        <p><strong>Name:</strong> Ainur Jannah</p>
+        <p><strong>ID:</strong> JanJan</p>
+        <p><strong>Role:</strong> Designer & Developer</p>
+        <p><strong>Power Level:</strong> Lv.99 Girlfriend</p>
+      </div>
+    </div>
+
+    <!-- Tabs for navigation -->
+    <div class="tab-menu">
+      <a href="birthday-wishes.html" class="home-tab">🎉 Birthday Wishes</a>
+      <a href="developer.html" class="home-tab active">💻 Developer</a>
+    </div>
+
   </div>
-
-  <!-- Chat Box for Developer -->
-  <main class="chat-box">
-    <div class="chat-bubble left">
-      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
-      <span class="typing-text" data-text="Hi! I’m Jan Jan, the creator of this website. 🎨"></span>
-    </div>
-    <div class="chat-bubble left">
-      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
-      <span class="typing-text" data-text="This site is built with love for my sayang ❤️"></span>
-    </div>
-    <div class="chat-bubble right">
-      <img src="images/sanzu-pixel.png" class="chat-avatar" alt="Sanzu">
-      <span class="typing-text" data-text="Aww baby, you’re the sweetest!"></span>
-    </div>
-  </main>
-
-  <button id="next-btn" class="continue-btn">▶ Continue</button>
-
-  <script src="js/main.js"></script>
-  <script src="js/wishes.js"></script>
 </body>
 </html>
