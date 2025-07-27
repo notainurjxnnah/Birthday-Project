@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Feed</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Retro Pixel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
     body {
       background-color: #fff2f2;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Press Start 2P', cursive;
       margin: 0;
       padding: 0;
       text-align: center;
-      color: #6b394d;
+      color: #7b0000;
     }
 
     .page-container {
@@ -21,34 +24,44 @@
       padding: 20px;
     }
 
-    /* Home button styled like Back button */
+    /* Retro Home Button */
     .home-btn {
       display: inline-block;
-      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #fff2f2;
+      color: #7b0000;
+      border: 3px solid #7b0000;
       text-decoration: none;
-      color: #9b5b6e;
-      font-weight: bold;
-      font-size: 16px;
+      font-family: 'Press Start 2P', cursive;
+      box-shadow: 4px 4px 0 #7b0000;
+      margin-bottom: 20px;
     }
 
     .page-title {
-      margin-top: 20px;
-      font-size: 24px;
-      color: #6b394d;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #7b0000;
     }
 
     .feed-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feed-item {
+      border: 3px solid #7b0000;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: #ffeaea;
+      box-shadow: 4px 4px 0 #7b0000;
     }
 
     .feed-item img {
       width: 100%;
-      border-radius: 15px;
+      border-radius: 10px;
       object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
@@ -61,7 +74,7 @@
     <h1 class="page-title">Our Moments</h1>
 
     <div class="feed-grid">
-      <!-- Placeholder images -->
+      <!-- Styled Feed Items -->
       <div class="feed-item"><img src="images/feed1.jpg" alt="Moment 1" /></div>
       <div class="feed-item"><img src="images/feed2.jpg" alt="Moment 2" /></div>
       <div class="feed-item"><img src="images/feed3.jpg" alt="Moment 3" /></div>
