@@ -4,36 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Birthday Wishes</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Pixel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
+    body {
+      background-color: #fff2f2;
+      font-family: 'Press Start 2P', cursive;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #7b0000;
+    }
+
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Home Button Styling */
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #fff2f2;
+      border: 3px solid #7b0000;
+      color: #7b0000;
+      text-decoration: none;
+      font-family: 'Press Start 2P', cursive;
+      box-shadow: 4px 4px 0 #7b0000;
+      margin-bottom: 30px;
+    }
+
+    /* Countdown styling */
     .countdown-container {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 50px;
       flex-wrap: wrap;
+      margin-bottom: 40px;
     }
+
     .time-box {
       text-align: center;
+      padding: 10px;
+      background-color: #ffeaea;
+      border: 3px solid #7b0000;
+      border-radius: 12px;
+      box-shadow: 4px 4px 0 #7b0000;
+      width: 80px;
     }
+
     .time-number {
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: bold;
     }
+
+    .time-label {
+      font-size: 0.6em;
+      margin-top: 5px;
+    }
+
+    /* Tab menu styling */
     .tab-menu {
       display: flex;
       justify-content: center;
-      margin-top: 30px;
       gap: 20px;
+      margin-top: 10px;
+      flex-wrap: wrap;
     }
+
     .home-tab {
       padding: 10px 20px;
-      background-color: #ffe4ec;
-      border-radius: 10px;
+      background-color: #ffeaea;
+      border: 3px solid #7b0000;
+      border-radius: 12px;
       text-decoration: none;
-      color: #8b0000;
-      font-weight: bold;
+      color: #7b0000;
+      font-family: 'Press Start 2P', cursive;
+      box-shadow: 4px 4px 0 #7b0000;
+      font-size: 0.6em;
     }
+
     .home-tab.active {
       background-color: #ffbad2;
     }
@@ -42,31 +96,31 @@
 <body class="page-container">
 
   <!-- Back to Home -->
-  <a href="main.html" class="back-btn">🏠 Home</a>
+  <a href="main.html" class="back-btn">← Home</a>
 
-  <!-- Countdown Flip Clock -->
+  <!-- Countdown -->
   <section class="countdown-container">
     <div class="time-box">
       <div class="time-number" id="days">00</div>
-      <div class="time-label">Days</div>
+      <div class="time-label">DAYS</div>
     </div>
     <div class="time-box">
       <div class="time-number" id="hours">00</div>
-      <div class="time-label">Hours</div>
+      <div class="time-label">HOURS</div>
     </div>
     <div class="time-box">
       <div class="time-number" id="minutes">00</div>
-      <div class="time-label">Minutes</div>
+      <div class="time-label">MINUTES</div>
     </div>
     <div class="time-box">
       <div class="time-number" id="seconds">00</div>
-      <div class="time-label">Seconds</div>
+      <div class="time-label">SECONDS</div>
     </div>
   </section>
 
   <!-- Tabs -->
   <div class="tab-menu wishes-tab">
-    <a href="birthday-wishes.html" class="home-tab">🎉 Birthday Wishes</a>
+    <a href="birthday-wishes.html" class="home-tab active">🎉 Birthday Wishes</a>
     <a href="developer.html" class="home-tab">💻 Developer</a>
   </div>
 
