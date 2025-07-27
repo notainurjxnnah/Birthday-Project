@@ -18,58 +18,47 @@
       text-align: center;
     }
 
-    .home-container {
-      max-width: 400px; /* narrower container for neat stacking */
+    .page-container {
+      max-width: 600px;
       margin: 0 auto;
       padding: 40px 20px;
     }
 
-    .home-title {
+    .page-title {
       font-size: 14px;
       color: #7b0000;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .tab-menu {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
 
     .home-tab {
-      display: block;
-      width: 100%; /* full width inside container */
-      max-width: 300px; /* max width for all buttons */
-      padding: 15px 0;
+      display: inline-block;
+      padding: 15px 20px;
       background-color: #ffbad2;
       border: 3px solid #7b0000;
       border-radius: 12px;
       text-decoration: none;
       color: #7b0000;
-      font-family: 'Press Start 2P', cursive;
-      box-shadow: 4px 4px 0 #7b0000;
       font-size: 0.6em;
-      text-align: center;
+      box-shadow: 4px 4px 0 #7b0000;
       transition: background-color 0.3s ease;
-      user-select: none;
     }
 
     .home-tab:hover {
       background-color: #ff9ac1;
     }
-
-    /* On wider screens, keep vertical stack but center container */
-    @media (min-width: 600px) {
-      .home-container {
-        max-width: 400px;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="home-container">
-    <h1 class="home-title">Welcome Sayang ❤️</h1>
+  <div class="page-container">
+    <h1 class="page-title">Welcome Sayang ❤️</h1>
+
     <div class="tab-menu">
       <a href="profile.html" class="home-tab">❤️ Profile</a>
       <a href="feed.html" class="home-tab">🖼 Feed</a>
