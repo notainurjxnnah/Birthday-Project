@@ -654,3 +654,18 @@ body {
 .continue-btn:hover {
   transform: scale(1.05);
 }
+.back-btn {
+  display: inline-block;
+  margin: 10px auto 20px auto;
+  text-decoration: none;
+  color: #9b5b6e;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #af4c74;
+  text-decoration: underline;
+}
