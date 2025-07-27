@@ -68,26 +68,6 @@
     .profile-info p strong {
       color: #af4c74;
     }
-
-    /* Tabs style (matching wishes.html) */
-    .tab-menu {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-      gap: 20px;
-    }
-    .home-tab {
-      padding: 10px 20px;
-      background-color: #ffe4ec;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #8b0000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .home-tab.active {
-      background-color: #ffbad2;
-    }
   </style>
 </head>
 <body>
@@ -97,7 +77,7 @@
     <a href="wishes.html" class="back-btn">← Back to Wishes</a>
 
     <!-- Hearts -->
-    <div class="hearts-row">💻 💖 🎀</div>
+    <div class="hearts-row" id="emoji-row">❤️ ❤️ ❤️</div>
 
     <!-- Developer Profile Box -->
     <div class="profile-box">
@@ -111,12 +91,6 @@
         <p><strong>Role:</strong> Designer & Developer</p>
         <p><strong>Power Level:</strong> Lv.99 Girlfriend</p>
       </div>
-    </div>
-
-    <!-- Tabs for navigation -->
-    <div class="tab-menu">
-      <a href="birthday-wishes.html" class="home-tab">🎉 Birthday Wishes</a>
-      <a href="developer.html" class="home-tab active">💻 Developer</a>
     </div>
 
   </div>
