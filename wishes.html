@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Birthday Wishes</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+    .time-box {
+      text-align: center;
+    }
+    .time-number {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .tab-menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    .home-tab {
+      padding: 10px 20px;
+      background-color: #ffe4ec;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #8b0000;
+      font-weight: bold;
+    }
+    .home-tab.active {
+      background-color: #ffbad2;
+    }
+  </style>
 </head>
 <body class="page-container">
 
@@ -33,30 +66,33 @@
 
   <!-- Tabs -->
   <div class="tab-menu wishes-tab">
-    <a href="birthday-wishes.html" class="home-tab active">🎉 Birthday Wishes</a>
+    <a href="birthday-wishes.html" class="home-tab">🎉 Birthday Wishes</a>
     <a href="developer.html" class="home-tab">💻 Developer</a>
   </div>
 
-  <!-- Chat Box -->
-  <main class="chat-box">
-    <div class="chat-bubble left">
-      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
-      <span class="typing-text" data-text="Hey sayang, happy birthday! 🎂"></span>
-    </div>
-    <div class="chat-bubble right">
-      <img src="images/sanzu-pixel.png" class="chat-avatar" alt="Sanzu">
-      <span class="typing-text" data-text="Aww thank you baby, I love you! ❤️"></span>
-    </div>
-    <div class="chat-bubble left">
-      <img src="images/janjan-pixel.png" class="chat-avatar" alt="JanJan">
-      <span class="typing-text" data-text="I hope today is as special as you are to me!"></span>
-    </div>
-  </main>
+  <script>
+    // Countdown timer to Oct 3, 2025
+    const targetDate = new Date("October 3, 2025 00:00:00").getTime();
 
-  <!-- Continue Button -->
-  <button id="next-btn" class="continue-btn">▶ Continue</button>
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
 
-  <script src="js/main.js"></script>
-  <script src="js/wishes.js"></script>
+      if (distance <= 0) return;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days.toString().padStart(2, "0");
+      document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+    };
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 </html>
