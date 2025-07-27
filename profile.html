@@ -9,23 +9,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      background-color: #fff2f2;
-      font-family: 'Press Start 2P', cursive;
+    html, body {
       margin: 0;
       padding: 0;
+      background-color: #fff2f2;
+      font-family: 'Press Start 2P', cursive;
       color: #7b0000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
+      height: 100%;
     }
 
     .page-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full screen height */
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-wrapper {
       max-width: 700px;
       width: 100%;
-      padding: 20px;
     }
 
     .back-btn {
@@ -83,25 +87,28 @@
 </head>
 <body>
   <div class="page-container">
-    
-    <!-- Back to Home -->
-    <a href="main.html" class="back-btn">← Home</a>
+    <div class="profile-wrapper">
+      
+      <!-- Back to Home -->
+      <a href="main.html" class="back-btn">← Home</a>
 
-    <!-- Hearts -->
-    <div class="hearts-row">❤️ ❤️ ❤️</div>
+      <!-- Hearts -->
+      <div class="hearts-row">❤️ ❤️ ❤️</div>
 
-    <!-- Profile Box -->
-    <div class="profile-box">
-      <div class="profile-pics">
-        <img src="images/profile_real.jpg" alt="Real Picture" class="profile-pic" />
-        <img src="images/profile_pixel.jpg" alt="Pixel Character" class="profile-pic" />
+      <!-- Profile Box -->
+      <div class="profile-box">
+        <div class="profile-pics">
+          <img src="images/profile_real.jpg" alt="Real Picture" class="profile-pic" />
+          <img src="images/profile_pixel.jpg" alt="Pixel Character" class="profile-pic" />
+        </div>
+        <div class="profile-info">
+          <p><strong>Name:</strong> Atif Haziq</p>
+          <p><strong>ID:</strong> Sanzu</p>
+          <p><strong>Rank:</strong> Discord Gamer Boy</p>
+          <p><strong>Level:</strong> Lvl.45 Boyfriend</p>
+        </div>
       </div>
-      <div class="profile-info">
-        <p><strong>Name:</strong> Atif Haziq</p>
-        <p><strong>ID:</strong> Sanzu</p>
-        <p><strong>Rank:</strong> Discord Gamer Boy</p>
-        <p><strong>Level:</strong> Lvl.45 Boyfriend</p>
-      </div>
+
     </div>
   </div>
 </body>
