@@ -638,34 +638,3 @@ body {
   color: #8b0000;
   text-align: left;
 }
-
-.continue-btn {
-  padding: 10px 20px;
-  background: #8b0000;
-  color: #fff;
-  border: 3px solid #5d0000;
-  font-family: 'Press Start 2P', cursive;
-  margin: 20px auto;
-  display: block;
-  box-shadow: 3px 3px 0 #5d0000;
-  transition: transform 0.2s ease;
-}
-
-.continue-btn:hover {
-  transform: scale(1.05);
-}
-.back-btn {
-  display: inline-block;
-  margin: 10px auto 20px auto;
-  text-decoration: none;
-  color: #9b5b6e;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.back-btn:hover {
-  color: #af4c74;
-  text-decoration: underline;
-}
